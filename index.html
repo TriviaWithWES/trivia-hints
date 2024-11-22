@@ -5,46 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia Hints for 11/17 – 11/23</title>
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Trivia Hints for 11/17 – 11/23">
-    <meta property="og:description" content="This week's trivia hints are here! Prepare to crush trivia night.">
-    <meta property="og:image" content="https://triviawithwes.github.io/trivia-hints/preview-image.jpg">
-    <meta property="og:url" content="https://triviawithwes.github.io/trivia-hints/">
-    <meta property="og:type" content="website">
-
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
     <!-- Basic Styling -->
     <style>
         /* Global Styling */
         body {
-            font-family: 'Quicksand', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #f5f3e6, #fbe8d4);
-            color: #333;
+            background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+            color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            overflow: hidden;
         }
 
         /* Header Styling */
         header {
-            background: linear-gradient(to right, #f57c00, #fbc02d);
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
             width: 100%;
-            padding: 15px;
+            padding: 15px 0;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            font-family: 'Raleway', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            font-family: 'Poppins', sans-serif;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
+            letter-spacing: 2px;
+            animation: fade-in 1.5s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Hints Section */
@@ -52,55 +59,68 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         .hints-container h2 {
-            font-size: 1.8rem;
-            color: #5a452f;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            color: #f9e5d8;
+            margin-bottom: 20px;
         }
 
         .hint-card {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #f8ead8;
-            padding: 15px 20px;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
             margin: 10px 0;
+            padding: 15px 20px;
             border-radius: 10px;
             font-size: 1.2rem;
             font-weight: bold;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .hint-card:hover {
-            background: #f7d3aa;
-            transform: translateY(-2px);
-            transition: all 0.3s ease-in-out;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
         }
 
         .hint-card span {
-            color: #c65d21;
+            color: #ffeaa7;
         }
 
         /* Footer Styling */
         footer {
             margin-top: 20px;
             font-size: 0.9rem;
-            color: #777;
+            color: #f9e5d8;
         }
 
         footer a {
-            color: #c65d21;
+            color: #ff9f43;
             text-decoration: none;
             font-weight: bold;
         }
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Subtle Background Animation */
+        @keyframes background-animate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            animation: background-animate 10s ease infinite;
+            background-size: 200% 200%;
         }
     </style>
 </head>
@@ -112,7 +132,7 @@
 
     <!-- Hints Section -->
     <div class="hints-container">
-        <h2>Get Ready to Win This Week!</h2>
+        <h2>Get Ready to Crush Trivia Night!</h2>
         <div class="hint-card"><span>A.</span> Bhutan</div>
         <div class="hint-card"><span>B.</span> Coleman</div>
         <div class="hint-card"><span>C.</span> Greenhouse</div>
@@ -124,7 +144,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>Think you can guess all the answers? <a href="#">Join us at trivia night!</a></p>
+        <p>Want to see yourself on the leaderboard? <a href="#">Join us for trivia night!</a></p>
     </footer>
 </body>
 </html>
