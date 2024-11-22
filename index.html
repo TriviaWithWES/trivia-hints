@@ -6,7 +6,7 @@
     <title>Trivia Hints for 11/17 – 11/23</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
     <!-- Styling -->
     <style>
@@ -15,77 +15,89 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+            background: linear-gradient(to bottom, #1c1c1c, #323232, #4b4b4b);
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             min-height: 100vh;
             text-align: center;
         }
 
         /* Header Styling */
         header {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            background: linear-gradient(to right, #ff7f50, #ff4500);
             width: 100%;
             padding: 20px 0;
             color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-            font-family: 'Poppins', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-family: 'Montserrat', sans-serif;
         }
 
         header h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             margin: 0;
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         /* Hints Section */
         .hints-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 30px auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #f4f4f4;
             border-radius: 25px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
         .hints-container h2 {
-            font-size: 2.5rem;
-            color: #f9e5d8;
-            margin-bottom: 30px;
+            font-size: 2.8rem;
+            color: #ff4500;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .hint-card {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            background: linear-gradient(to right, #ff512f, #dd2476);
-            color: white;
-            margin: 15px 0;
-            padding: 20px 25px;
+            justify-content: center;
+            background: linear-gradient(to right, #ffd700, #f4a460);
+            color: #333;
+            margin: 15px auto;
+            padding: 20px;
             border-radius: 15px;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: bold;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        .hint-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 69, 0, 0.5);
         }
 
         .hint-card span {
-            color: #ffeaa7;
-            font-size: 1.3rem;
+            color: #333;
+            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
         }
 
         /* Footer Styling */
         footer {
             margin-top: 30px;
             font-size: 1.2rem;
-            color: #f9e5d8;
+            color: #ddd;
             text-align: center;
         }
 
         footer a {
-            color: #ff9f43;
+            color: #ffa07a;
             text-decoration: none;
             font-weight: bold;
         }
@@ -95,32 +107,36 @@
         }
 
         footer img {
-            max-width: 150px;
+            max-width: 200px;
             height: auto;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         /* Responsive Adjustments for Small Screens */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
 
             .hints-container h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .hint-card {
-                font-size: 1.2rem;
+                font-size: 1.8rem;
                 padding: 15px;
             }
 
             .hint-card span {
-                font-size: 1rem;
+                font-size: 2rem;
             }
 
             footer {
                 font-size: 1rem;
+            }
+
+            footer img {
+                max-width: 150px;
             }
         }
     </style>
@@ -133,14 +149,14 @@
 
     <!-- Hints Section -->
     <div class="hints-container">
-        <h2>Get Ready to Crush Trivia Night!</h2>
-        <div class="hint-card"><span>A.</span> Bhutan</div>
-        <div class="hint-card"><span>B.</span> Coleman</div>
-        <div class="hint-card"><span>C.</span> Greenhouse</div>
-        <div class="hint-card"><span>D.</span> Madeira</div>
-        <div class="hint-card"><span>E.</span> Norway</div>
-        <div class="hint-card"><span>F.</span> St. Louis</div>
-        <div class="hint-card"><span>G.</span> Taos</div>
+        <h2>Get Ready to Shine!</h2>
+        <div class="hint-card"><span>A</span> Bhutan</div>
+        <div class="hint-card"><span>B</span> Coleman</div>
+        <div class="hint-card"><span>C</span> Greenhouse</div>
+        <div class="hint-card"><span>D</span> Madeira</div>
+        <div class="hint-card"><span>E</span> Norway</div>
+        <div class="hint-card"><span>F</span> St. Louis</div>
+        <div class="hint-card"><span>G</span> Taos</div>
     </div>
 
     <!-- Footer -->
