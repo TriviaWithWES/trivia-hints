@@ -39,18 +39,16 @@
             font-size: 3.5rem;
             margin: 0;
             letter-spacing: 2px;
-            animation: fade-in 1.5s ease-in-out;
         }
 
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Image Styling (Responsive) */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px; /* Optional: Adds rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds subtle shadow */
         }
 
         /* Hints Section */
@@ -81,12 +79,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .hint-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 35px rgba(255, 255, 255, 0.4);
         }
 
         .hint-card span {
@@ -111,19 +103,14 @@
             text-decoration: underline;
         }
 
-        /* Mobile-First Adjustments for iPhone 16 */
-        @media (max-width: 1290px) {
+        /* Responsive Adjustments for Small Screens */
+        @media (max-width: 768px) {
             header h1 {
-                font-size: 2.8rem; /* Shrinks title size */
-            }
-
-            .hints-container {
-                margin: 20px;
-                padding: 20px;
+                font-size: 2.8rem;
             }
 
             .hints-container h2 {
-                font-size: 2rem; /* Shrinks subtitle for smaller screens */
+                font-size: 2rem;
             }
 
             .hint-card {
@@ -139,18 +126,6 @@
                 font-size: 1rem;
             }
         }
-
-        /* Background Animation */
-        @keyframes background-animate {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        body {
-            animation: background-animate 10s ease infinite;
-            background-size: 200% 200%;
-        }
     </style>
 </head>
 <body>
@@ -158,6 +133,9 @@
     <header>
         <h1>Trivia Hints for 11/17 – 11/23</h1>
     </header>
+
+    <!-- Optional Image -->
+    <img src="https://example.com/your-image.jpg" alt="Trivia Hints Background">
 
     <!-- Hints Section -->
     <div class="hints-container">
