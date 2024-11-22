@@ -71,14 +71,22 @@
             font-size: 2rem;
             font-weight: bold;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
             max-width: 80%;
             text-align: center;
+            cursor: pointer;
         }
 
         .hint-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(255, 69, 0, 0.5);
+        }
+
+        /* Highlighted Hint */
+        .hint-card.highlight {
+            background: linear-gradient(to right, #32cd32, #228b22);
+            color: white;
+            box-shadow: 0 15px 35px rgba(50, 205, 50, 0.8);
         }
 
         /* Footer Styling */
@@ -139,13 +147,13 @@
     <!-- Hints Section -->
     <div class="hints-container">
         <h2>Get Ready to Shine!</h2>
-        <div class="hint-card">Bhutan</div>
-        <div class="hint-card">Coleman</div>
-        <div class="hint-card">Greenhouse</div>
-        <div class="hint-card">Madeira</div>
-        <div class="hint-card">Norway</div>
-        <div class="hint-card">St. Louis</div>
-        <div class="hint-card">Taos</div>
+        <div class="hint-card" onclick="highlightHint(this)">Bhutan</div>
+        <div class="hint-card" onclick="highlightHint(this)">Coleman</div>
+        <div class="hint-card" onclick="highlightHint(this)">Greenhouse</div>
+        <div class="hint-card" onclick="highlightHint(this)">Madeira</div>
+        <div class="hint-card" onclick="highlightHint(this)">Norway</div>
+        <div class="hint-card" onclick="highlightHint(this)">St. Louis</div>
+        <div class="hint-card" onclick="highlightHint(this)">Taos</div>
     </div>
 
     <!-- Footer -->
@@ -153,5 +161,17 @@
         <p>Want to see yourself on the leaderboard? <a href="https://play.lastcalltrivia.com" target="_blank">Join us for trivia night!</a></p>
         <img src="https://lastcalltrivia.com/wp-content/uploads/2021/04/Logo_Last-Call-Trivia_Teal-174x72.png" alt="Last Call Trivia Logo">
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function highlightHint(selectedHint) {
+            // Remove highlight from all hints
+            const hints = document.querySelectorAll('.hint-card');
+            hints.forEach(hint => hint.classList.remove('highlight'));
+
+            // Add highlight to the clicked hint
+            selectedHint.classList.add('highlight');
+        }
+    </script>
 </body>
 </html>
