@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia Hints for 11/17 – 11/23</title>
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="This Week's Trivia Hints" />
+    <meta property="og:description" content="Prepare to win big with this week's trivia hints!" />
+    <meta property="og:image" content="https://triviawithwes.github.io/trivia-hints/preview-image.jpg" />
+    <meta property="og:url" content="https://triviawithwes.github.io/trivia-hints/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:alt" content="Weekly Trivia Hints" />
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
     <!-- Styling -->
     <style>
@@ -15,149 +23,231 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f7f7f7;
-            color: #333;
+            background: linear-gradient(to bottom, #fbe7c6, #f4a261);
+            color: #4b2e1c;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            min-height: 100vh;
             text-align: center;
+            min-height: 100vh;
         }
 
-        /* Header Section */
+        /* Header Styling */
         header {
-            background: linear-gradient(135deg, #007b83, #00a8b5);
+            background: #d97706;
+            background: linear-gradient(to right, #d97706, #eab308);
             width: 100%;
-            padding: 40px 0;
+            padding: 20px 0;
             color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
             font-size: 3rem;
-            font-family: 'Poppins', sans-serif;
             margin: 0;
-            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         header p {
+            margin: 5px 0 0;
             font-size: 1.2rem;
-            font-family: 'Roboto', sans-serif;
-            margin-top: 10px;
+            color: #ffe082;
         }
 
         /* Hints Section */
         .hints-container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 30px;
+            background: #fff8e6;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
         .hints-container h2 {
-            font-size: 2.4rem;
-            color: #007b83;
+            font-size: 2.5rem;
+            color: #d97706;
             margin-bottom: 20px;
-            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
-        .hint-card {
-            background: #e6f5f7;
-            color: #007b83;
-            margin: 15px auto;
-            padding: 20px;
-            border-radius: 10px;
+        .hint {
             font-size: 1.8rem;
             font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 15px 0;
+            padding: 15px;
+            background: linear-gradient(to right, #f4a261, #e76f51);
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            max-width: 85%;
             text-align: center;
             cursor: pointer;
         }
 
-        .hint-card:hover {
+        .hint:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 123, 131, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background: #c05621;
         }
 
-        /* CTA Footer Section */
-        footer {
-            margin-top: 40px;
-            padding: 20px 10px;
-            width: 100%;
-            background: linear-gradient(135deg, #007b83, #00a8b5);
-            color: white;
+        /* Venues Section */
+        .venues {
+            margin-top: 30px;
+            padding: 25px;
+            background: #ffedd5;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
             text-align: center;
         }
 
-        footer p {
+        .venues h3 {
+            font-size: 2rem;
+            color: #d97706;
+            margin-bottom: 15px;
+        }
+
+        .venue-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .venue-item {
+            background: linear-gradient(to right, #fbe7c6, #f4a261);
+            color: #4b2e1c;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
             font-size: 1.2rem;
-            margin: 10px 0;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .venue-item:hover {
+            background: #e76f51;
+            color: white;
+        }
+
+        .venue-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 15px;
+        }
+
+        .venue-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #d97706;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 10px;
         }
 
         footer a {
-            color: #ffe1b1;
+            color: #ffe082;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
         }
 
         footer a:hover {
-            color: white;
             text-decoration: underline;
         }
 
         footer img {
-            max-width: 120px;
+            max-width: 200px;
             height: auto;
             margin-top: 20px;
         }
 
-        /* Responsive Adjustments */
+        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
+            }
+
+            .hints-container {
+                padding: 20px;
             }
 
             .hints-container h2 {
                 font-size: 2rem;
             }
 
-            .hint-card {
+            .hint {
                 font-size: 1.5rem;
+                padding: 10px;
+            }
+
+            .venues h3 {
+                font-size: 1.8rem;
+            }
+
+            .venue-item {
+                font-size: 1rem;
+                padding: 8px;
             }
 
             footer {
                 font-size: 1rem;
             }
+
+            footer img {
+                max-width: 150px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <h1>Trivia Hints for 11/17 – 11/23</h1>
-        <p>Be ready for trivia night – Check out this week's hints below!</p>
+        <p>Powered by Last Call Trivia</p>
     </header>
 
     <!-- Hints Section -->
     <div class="hints-container">
-        <h2>Weekly Trivia Hints</h2>
-        <div class="hint-card">Bhutan</div>
-        <div class="hint-card">Coleman</div>
-        <div class="hint-card">Greenhouse</div>
-        <div class="hint-card">Madeira</div>
-        <div class="hint-card">Norway</div>
-        <div class="hint-card">St. Louis</div>
-        <div class="hint-card">Taos</div>
+        <h2>This Week's Hints:</h2>
+        <div class="hint">Bhutan</div>
+        <div class="hint">Coleman</div>
+        <div class="hint">Greenhouse</div>
+        <div class="hint">Madeira</div>
+        <div class="hint">Norway</div>
+        <div class="hint">St. Louis</div>
+        <div class="hint">Taos</div>
     </div>
 
-    <!-- Footer Section -->
+    <!-- Venues Section -->
+    <div class="venues">
+        <h3>Visit These Venues for Trivia</h3>
+        <ul class="venue-list">
+            <li class="venue-item"><a href="https://ringosbar.com" target="_blank">Ringo's Bar & Grill - Sunday @ 6:30 PM</a></li>
+            <li class="venue-item"><a href="https://www.ickabodsbarandgrill.com" target="_blank">Ickabod's Bar & Grill - Monday @ 7:00 PM</a></li>
+            <li class="venue-item"><a href="http://www.broadwaysaloon.com" target="_blank">Broadway Saloon - Tuesday @ 7:00 PM</a></li>
+            <li class="venue-item"><a href="https://theoldbarnonbarbur.com" target="_blank">The Old Barn - Wednesday @ 7:00 PM</a></li>
+            <li class="venue-item"><a href="https://www.steeplejackbeer.com/location/steeplejack-pizza-and-beer" target="_blank">Steeplejack Pizza & Beer - Thursday @ 6:30 PM</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>Want to see yourself on the leaderboard? <a href="https://play.lastcalltrivia.com" target="_blank">Join us for trivia night!</a></p>
-        <img src="https://lastcalltrivia.com/wp-content/uploads/2021/04/Logo_Last-Call-Trivia_Teal-174x72.png" alt="Last Call Trivia Logo">
+        <p>See yourself on the leaderboard? <a href="https://play.lastcalltrivia.com" target="_blank">Join the fun!</a></p>
     </footer>
 </body>
-</html>
+</
