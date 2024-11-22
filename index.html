@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia Hints for 11/17 – 11/23</title>
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="This Week's Trivia Hints" />
+    <meta property="og:description" content="Get a sneak peek at this week's trivia hints and come prepared to win!" />
+    <meta property="og:image" content="https://triviawithwes.github.io/trivia-hints/preview-image.jpg" />
+    <meta property="og:url" content="https://triviawithwes.github.io/trivia-hints/" />
+    <meta property="og:type" content="website" />
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
@@ -82,13 +89,6 @@
             box-shadow: 0 15px 35px rgba(255, 69, 0, 0.5);
         }
 
-        /* Highlighted Hint */
-        .hint-card.highlight {
-            background: linear-gradient(to right, #32cd32, #228b22);
-            color: white;
-            box-shadow: 0 15px 35px rgba(50, 205, 50, 0.8);
-        }
-
         /* Footer Styling */
         footer {
             margin-top: 30px;
@@ -147,31 +147,18 @@
     <!-- Hints Section -->
     <div class="hints-container">
         <h2>Get Ready to Shine!</h2>
-        <div class="hint-card" onclick="highlightHint(this)">Bhutan</div>
-        <div class="hint-card" onclick="highlightHint(this)">Coleman</div>
-        <div class="hint-card" onclick="highlightHint(this)">Greenhouse</div>
-        <div class="hint-card" onclick="highlightHint(this)">Madeira</div>
-        <div class="hint-card" onclick="highlightHint(this)">Norway</div>
-        <div class="hint-card" onclick="highlightHint(this)">St. Louis</div>
-        <div class="hint-card" onclick="highlightHint(this)">Taos</div>
+        <div class="hint-card">Bhutan</div>
+        <div class="hint-card">Coleman</div>
+        <div class="hint-card">Greenhouse</div>
+        <div class="hint-card">Madeira</div>
+        <div class="hint-card">Norway</div>
+        <div class="hint-card">St. Louis</div>
+        <div class="hint-card">Taos</div>
     </div>
 
     <!-- Footer -->
     <footer>
         <p>Want to see yourself on the leaderboard? <a href="https://play.lastcalltrivia.com" target="_blank">Join us for trivia night!</a></p>
-        <img src="https://triviawithwes.github.io/trivia-hints/preview-images.jpg" alt="Last Call Trivia Logo">
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        function highlightHint(selectedHint) {
-            // Remove highlight from all hints
-            const hints = document.querySelectorAll('.hint-card');
-            hints.forEach(hint => hint.classList.remove('highlight'));
-
-            // Add highlight to the clicked hint
-            selectedHint.classList.add('highlight');
-        }
-    </script>
 </body>
 </html>
