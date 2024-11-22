@@ -3,75 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Hints for 11/10 – 11/16</title>
+    <title>Trivia Hints for 11/17 – 11/23</title>
 
-    <!-- Open Graph Meta Tags for Facebook Sharing -->
-    <meta property="og:title" content="Trivia Hints for 11/10 – 11/16">
-    <meta property="og:description" content="Prepare for this week's trivia with these hints and dominate trivia night!">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Trivia Hints for 11/17 – 11/23">
+    <meta property="og:description" content="This week's trivia hints are here! Prepare to crush trivia night.">
     <meta property="og:image" content="https://triviawithwes.github.io/trivia-hints/preview-image.jpg">
     <meta property="og:url" content="https://triviawithwes.github.io/trivia-hints/">
     <meta property="og:type" content="website">
 
-    <!-- Basic CSS for Styling -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Basic Styling -->
     <style>
+        /* Global Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #f7d9a3, #f5b971);
+            background: linear-gradient(to bottom, #f5f3e6, #fbe8d4);
             color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-        }
-        .container {
-            max-width: 600px;
+            min-height: 100vh;
             text-align: center;
-            background: #fff8ed;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        h1 {
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #f57c00, #fbc02d);
+            width: 100%;
+            padding: 15px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-family: 'Raleway', sans-serif;
+        }
+
+        header h1 {
             font-size: 2.5rem;
-            color: #b45f04;
-            margin-bottom: 20px;
+            margin: 0;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+
+        /* Hints Section */
+        .hints-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-        ul li {
-            font-size: 1.2rem;
-            background: #ffe6cc;
-            color: #8b4500;
+
+        .hints-container h2 {
+            font-size: 1.8rem;
+            color: #5a452f;
+            margin-bottom: 10px;
+        }
+
+        .hint-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8ead8;
+            padding: 15px 20px;
             margin: 10px 0;
-            padding: 10px 15px;
             border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hint-card:hover {
+            background: #f7d3aa;
+            transform: translateY(-2px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hint-card span {
+            color: #c65d21;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer a {
+            color: #c65d21;
+            text-decoration: none;
             font-weight: bold;
         }
-        .date {
-            margin-top: 20px;
-            font-size: 1rem;
-            color: #666;
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Trivia Hints for 11/10 – 11/16</h1>
-        <ul>
-            <li>A. Cassius</li>
-            <li>B. Catalina</li>
-            <li>C. Corvair</li>
-            <li>D. Holstein</li>
-            <li>E. Nymph</li>
-            <li>F. Pueblo</li>
-            <li>G. Rossignol</li>
-        </ul>
-        <div class="date">Hints for the week of 11/10 – 11/16</div>
+    <!-- Header -->
+    <header>
+        <h1>Trivia Hints for 11/17 – 11/23</h1>
+    </header>
+
+    <!-- Hints Section -->
+    <div class="hints-container">
+        <h2>Get Ready to Win This Week!</h2>
+        <div class="hint-card"><span>A.</span> Bhutan</div>
+        <div class="hint-card"><span>B.</span> Coleman</div>
+        <div class="hint-card"><span>C.</span> Greenhouse</div>
+        <div class="hint-card"><span>D.</span> Madeira</div>
+        <div class="hint-card"><span>E.</span> Norway</div>
+        <div class="hint-card"><span>F.</span> St. Louis</div>
+        <div class="hint-card"><span>G.</span> Taos</div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Think you can guess all the answers? <a href="#">Join us at trivia night!</a></p>
+    </footer>
 </body>
 </html>
