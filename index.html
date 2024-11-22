@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,13 @@
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="This Week's Trivia Hints" />
-    <meta property="og:description" content="Prepare to win big with this week's trivia hints!" />
+    <meta property="og:description" content="Get a sneak peek at this week's trivia hints and come prepared to win!" />
     <meta property="og:image" content="https://triviawithwes.github.io/trivia-hints/preview-image.jpg" />
     <meta property="og:url" content="https://triviawithwes.github.io/trivia-hints/" />
     <meta property="og:type" content="website" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
     <!-- Styling -->
     <style>
@@ -22,145 +23,129 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #fbe7c6, #f4a261);
-            color: #4b2e1c;
+            background: linear-gradient(to bottom, #f7d9a3, #f5b971);
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            text-align: center;
             min-height: 100vh;
+            text-align: center;
         }
 
         /* Header Styling */
         header {
-            background: #d97706;
-            background: linear-gradient(to right, #d97706, #eab308);
+            background: linear-gradient(to right, #d35400, #e67e22);
             width: 100%;
-            padding: 20px 0;
+            padding: 10px 0;
             color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             font-family: 'Montserrat', sans-serif;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin: 0;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2rem;
-            color: #ffe082;
         }
 
         /* Hints Section */
         .hints-container {
             max-width: 700px;
             margin: 20px auto;
-            padding: 30px;
-            background: #fff8e6;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            background: #fff5e6;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
         .hints-container h2 {
-            font-size: 2.5rem;
-            color: #d97706;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            font-size: 2rem;
+            color: #d35400;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .hint {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin: 15px auto;
+        /* Hints Grid */
+        .hints-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .hint-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #ffd700, #f4a460);
+            color: #333;
             padding: 15px;
-            background: linear-gradient(to right, #f4a261, #e76f51);
             border-radius: 15px;
-            color: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-            max-width: 85%;
-            text-align: center;
             cursor: pointer;
         }
 
-        .hint:hover {
+        .hint-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            background: #c05621;
+            box-shadow: 0 15px 35px rgba(211, 84, 0, 0.5);
+            background: linear-gradient(to right, #e67e22, #f39c12);
         }
 
         /* Venues Section */
-        .venues {
-            margin-top: 30px;
-            padding: 25px;
-            background: #ffedd5;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            max-width: 900px;
-            text-align: center;
+        .venues-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffefd5;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
-        .venues h3 {
-            font-size: 2rem;
-            color: #d97706;
-            margin-bottom: 15px;
+        .venues-container h2 {
+            font-size: 2.2rem;
+            color: #d35400;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .venue-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-
-        .venue-item {
-            background: linear-gradient(to right, #fbe7c6, #f4a261);
-            color: #4b2e1c;
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.2rem;
+        .venue-bubble {
+            background: linear-gradient(to right, #ffcc00, #ffb347);
+            color: #333;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 15px;
+            font-size: 1.3rem;
             font-weight: bold;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
-        .venue-item:hover {
-            background: #e76f51;
-            color: white;
-        }
-
-        .venue-item a {
+        .venue-bubble a {
+            color: #333;
             text-decoration: none;
-            color: inherit;
-            display: block;
-            padding: 15px;
         }
 
-        .venue-item a:hover {
-            text-decoration: underline;
+        .venue-bubble:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 153, 0, 0.5);
+            background: linear-gradient(to right, #ffa500, #ff8c00);
         }
 
         /* Footer Styling */
         footer {
-            margin-top: 20px;
-            padding: 20px;
-            background: #d97706;
-            color: white;
-            font-size: 1.3rem;
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #333;
             text-align: center;
-            border-radius: 10px;
         }
 
         footer a {
-            color: #ffe082;
+            color: #e67e22;
             text-decoration: none;
             font-weight: bold;
         }
@@ -169,74 +154,72 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design */
+        /* Responsive Adjustments for Small Screens */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
-            }
-
-            .hints-container {
-                padding: 20px;
-            }
-
-            .hints-container h2 {
                 font-size: 2rem;
             }
 
-            .hint {
-                font-size: 1.5rem;
-                padding: 10px;
-            }
-
-            .venues h3 {
+            .hints-container h2, .venues-container h2 {
                 font-size: 1.8rem;
             }
 
-            .venue-item {
-                font-size: 1rem;
-                padding: 8px;
+            .hint-card, .venue-bubble {
+                font-size: 1.2rem;
+                padding: 10px;
             }
 
             footer {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <h1>Trivia Hints for 11/17 – 11/23</h1>
-        <p>Last Call Trivia with WES</p>
     </header>
 
     <!-- Hints Section -->
     <div class="hints-container">
-        <h2>This Week's Hints:</h2>
-        <div class="hint">Bhutan</div>
-        <div class="hint">Coleman</div>
-        <div class="hint">Greenhouse</div>
-        <div class="hint">Madeira</div>
-        <div class="hint">Norway</div>
-        <div class="hint">St. Louis</div>
-        <div class="hint">Taos</div>
+        <h2>Get Ready to Shine!</h2>
+        <div class="hints-grid">
+            <div class="hint-card">Bhutan</div>
+            <div class="hint-card">Coleman</div>
+            <div class="hint-card">Greenhouse</div>
+            <div class="hint-card">Madeira</div>
+            <div class="hint-card">Norway</div>
+            <div class="hint-card">St. Louis</div>
+            <div class="hint-card">Taos</div>
+        </div>
     </div>
 
     <!-- Venues Section -->
-    <div class="venues">
-        <h3>Visit These Venues for Trivia</h3>
-        <ul class="venue-list">
-            <li class="venue-item"><a href="https://ringosbar.com" target="_blank">Ringo's Bar & Grill - Sunday @ 6:30 PM</a></li>
-            <li class="venue-item"><a href="https://www.ickabodsbarandgrill.com" target="_blank">Ickabod's Bar & Grill - Monday @ 7:00 PM</a></li>
-            <li class="venue-item"><a href="http://www.broadwaysaloon.com" target="_blank">Broadway Saloon - Tuesday @ 7:00 PM</a></li>
-            <li class="venue-item"><a href="https://theoldbarnonbarbur.com" target="_blank">The Old Barn - Wednesday @ 7:00 PM</a></li>
-            <li class="venue-item"><a href="https://www.steeplejackbeer.com/location/steeplejack-pizza-and-beer" target="_blank">Steeplejack Pizza & Beer - Thursday @ 6:30 PM</a></li>
-        </ul>
+    <div class="venues-container">
+        <h2>Venues This Week</h2>
+        <div class="venue-bubble">
+            <a href="https://ringosbar.com" target="_blank">Ringo's Bar & Grill - Sunday at 6:30 PM</a>
+        </div>
+        <div class="venue-bubble">
+            <a href="https://www.ickabodsbarandgrill.com" target="_blank">Ickabod's Bar & Grill - Monday at 7:00 PM</a>
+        </div>
+        <div class="venue-bubble">
+            <a href="http://www.broadwaysaloon.com" target="_blank">Broadway Saloon - Tuesday at 7:00 PM</a>
+        </div>
+        <div class="venue-bubble">
+            <a href="https://theoldbarnonbarbur.com" target="_blank">The Old Barn - Wednesday at 7:00 PM</a>
+        </div>
+        <div class="venue-bubble">
+            <a href="https://www.steeplejackbeer.com/location/steeplejack-pizza-and-beer" target="_blank">Steeplejack Pizza & Beer - Thursday at 6:30 PM</a>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>Come join us for trivia night and show off your skills! <a href="https://play.lastcalltrivia.com" target="_blank">Click to Play now!</a></p>
+        <p>Come join us for trivia night! <a href="https://play.lastcalltrivia.com" target="_blank">Play with us here!</a></p>
     </footer>
 </body>
+
 </html>
